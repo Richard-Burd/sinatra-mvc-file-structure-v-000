@@ -6,7 +6,7 @@ class ApplicationController < Sinatra::Base
   end
 
   get "/" do
-    raise params.inspect
+#    raise params.inspect
   	erb :index
   end
 
