@@ -6,6 +6,15 @@ class ApplicationController < Sinatra::Base
   end
 
   get "/" do
+    raise params.inspect
   	erb :index
   end
+
+  get '/posts/:id' do
+  #  raise params.inspect
+    @post = Post.find(params[:id])
+
+    erb :"posts/show.html"
+  end
+
 end
